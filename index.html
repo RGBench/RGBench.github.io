@@ -75,17 +75,25 @@ Garment Manipulation featuring a High-Fidelity Scalable Simulator</title>
                     <span class="author-block">Zhengjie Shu, </span>
                     <span class="author-block">Wei Li, </span>
                     <span class="author-block">Huamin Wang, </span>
-                    <span class="author-block">Ruigang Yang</span>
+                    <span class="author-block">Ruigang Yang<sup>†</sup></span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">
                       <sup>1</sup><img src="static/images/SJTU.png" alt="SJTU GIFT" style="height:48px;vertical-align:middle;margin-right:8px;">
                       Shanghai Jiao Tong University,
-                      <sup>2</sup><img src="static/images/style3d.png" alt="Style3D" style="height:48px;vertical-align:middle;margin-left:8px;">
-                      <br>AAAI 2026 Under Review
+                      <sup>2</sup><img src="static/images/style3d.png" alt="Style3D" style="height:48px;vertical-align:middle;margin-left:8px;margin-right:8px;">
+                      Style3D,
+                      <sup>3</sup><img src="static/images/NJU.png" alt="Nanjing University" style="height:48px;vertical-align:middle;margin-left:8px;">
+                      Nanjing University
+                      <br>AAAI 2026 Accepted
                     </span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution<br><sup>†</sup>Corresponding Author</small></span>
+                    <div class="is-size-5 publication-authors" style="margin-top: 0.5rem;">
+                      <span class="author-block">
+                        <small>chn.h.w.k@sjtu.edu.cn, tangxincheng@sjtu.edu.cn, ryang2@sjtu.edu.cn</small>
+                      </span>
+                    </div>
                   </div>
 
                   <div class="column has-text-centered">
@@ -113,14 +121,14 @@ Garment Manipulation featuring a High-Fidelity Scalable Simulator</title>
                     </a>
                   </span> -->
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code(TODO)</span>
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/hwk0809/RGBench" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
                   </a>
                 </span>
 
@@ -143,6 +151,7 @@ Garment Manipulation featuring a High-Fidelity Scalable Simulator</title>
 </section>
 
 
+<!-- Teaser video-->
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -180,9 +189,13 @@ Garment Manipulation featuring a High-Fidelity Scalable Simulator</title>
           </video>
         </div>
       </div>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem;">
+        Robotic Manipulation of Garments and Fabrics with Diverse Materials in RGBench.
+      </h2>
     </div>
   </div>
 </section>
+<!-- End teaser video -->
 <!-- End teaser video -->
 
 <section class="hero is-small">
@@ -203,7 +216,7 @@ Garment Manipulation featuring a High-Fidelity Scalable Simulator</title>
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-justified is-size-5">
           <p>
 While there has been significant progress to use simulated data to learn robotic manipulation of rigid objects, applying its success to deformable objects has been hindered by the lack of both deformable object models and realistic non-rigid body simulators. In this paper, we present Real Garment Benchmark(RGBench), a comprehensive benchmark for robotic manipulation of garments. It features a diverse set of over 6000 garment mesh models, a new high-performance simulator, and a comprehensive protocol to evaluate garment simulation quality with carefully measured real garment dynamics. Our experiments demonstrate that our simulator outperforms currently available cloth simulators by a large margin, reducing simulation error by 20% while maintaining a speed of 3 times faster. We will publicly release RGBench to accelerate future research in robotic garment manipulation. 
           </p>
@@ -220,7 +233,8 @@ While there has been significant progress to use simulated data to learn robotic
       <h2 class="title is-3" style="margin-bottom: 1rem;">Overview</h2>
       <img src="static/images/overview.png" alt="Overview of RGBench framework" style="max-width:1000px;width:100%;height:auto;border-radius:10px;">
       <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
-        Overview of RGBench framework
+        Overview of RGBench framework, which integrates a diverse garment dataset, dual-arm robotic
+        setups, and the GarmentDynamics simulation system, covering three core tasks to bridge real-world and simulated garment interaction research.
       </h2>
     </div>
   </div>
@@ -240,13 +254,45 @@ While there has been significant progress to use simulated data to learn robotic
   </div>
 </section>
 
-<section class="hero is-small">
+<section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container has-text-centered">
       <h2 class="title is-3" style="margin-bottom: 1rem;">Results</h2>
-      <img src="static/images/results.png" alt="RGBench garment results" style="max-width:1000px;width:100%;height:auto;border-radius:10px;">
+      
+      <!-- 新增的效率对比图 -->
+      <h3 class="title is-4" style="text-align: left; margin-bottom: 1rem;">Simulator efficiency comparison</h3>
+      <img src="static/images/effiency_compare.png" alt="Simulator efficiency comparison" style="max-width:1000px;width:100%;height:auto;border-radius:10px;">
       <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
-        Simple Results on a selected T-shirt
+        Simulator efficiency comparison (left) Average Initial Time; (right) Average Step Time
+        <br>
+        <strong><span style="font-size: 1.1em;"><span style="color: #3273dc;">3</span>X</span></strong> faster than Isaac Sim, reducing <strong><span style="font-size: 1.1em; color: #3273dc;">90%</span></strong> initialization time
+      </h2>
+      <div style="margin-bottom: 2rem;"></div>
+
+      <!-- 新增的准确性对比表格 -->
+      <h3 class="title is-4" style="text-align: left; margin-bottom: 1rem;">Benchmark in cloth simulation accuracy</h3>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <img src="static/images/table.png" alt="Benchmark table" style="max-width:480px;width:48%;height:auto;border-radius:10px;">
+        <img src="static/images/table1.png" alt="Benchmark table 1" style="max-width:480px;width:48%;height:auto;border-radius:10px;">
+      </div>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+        It reduces the sim-to-real gap by over <strong><span style="font-size: 1.1em; color: #3273dc;">20%</span></strong> on average and by as much as <strong><span style="font-size: 1.1em; color: #3273dc;">77%</span></strong> for topologically complex garments.
+      </h2>
+      <div style="margin-bottom: 2rem;"></div>
+      
+      <!-- 原有的results图 -->
+      <h3 class="title is-4" style="text-align: left; margin-bottom: 1rem;">Qualitative results of different actions for a T-shirt</h3>
+      <img src="static/images/results.png" alt="RGBench garment results" style="max-width:1000px;width:100%;height:auto;border-radius:10px;">
+      <div style="margin-bottom: 2rem;"></div>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1rem; margin-bottom: 2rem;">
+        For grasp and fold tasks, error reduction up to <strong><span style="font-size: 1.1em; color: #3273dc;">35%</span></strong> and <strong><span style="font-size: 1.1em; color: #3273dc;">58%</span></strong>. For dynamic fling task, improving metrics by over <strong><span style="font-size: 1.1em; color: #3273dc;">20%</span></strong>.
+      </h2>
+      
+      <!-- 不同服装类型的抓取任务结果 -->
+      <h3 class="title is-4" style="text-align: left; margin-bottom: 1rem;">Results of different garment types in grasp task</h3>
+      <img src="static/images/different_mode.png" alt="Results of different garment types" style="max-width:1000px;width:100%;height:auto;border-radius:10px;">
+      <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+        GarmentDynamics achieves the lowest sim-to-real gap across different garment types, with error reductions of over <strong><span style="font-size: 1.1em; color: #3273dc;">37%</span></strong> compared to baselines. For complex garments like Cakeskirt, it reduces errors by up to <strong><span style="font-size: 1.1em; color: #3273dc;">44%</span></strong> in pseudo mode and <strong><span style="font-size: 1.1em; color: #3273dc;">77%</span></strong> in robot mode.
       </h2>
     </div>
   </div>
@@ -360,8 +406,6 @@ While there has been significant progress to use simulated data to learn robotic
 
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
 
         </div>
